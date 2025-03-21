@@ -1,5 +1,5 @@
-// import footerLogo from "../../assets/hero/logo.jpg";
-// import Banner from "../../assets/hero/footerbg.jpg";
+import PropTypes from "prop-types"; // Import prop-types
+
 import {
     FaFacebook,
     FaInstagram, 
@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 const BannerImg = {
-    backgroundImage: `url(${"src/assets/hero/footerbg.jpg"})`,
+    backgroundImage: `url(${"https://res.cloudinary.com/dlcoacdkb/image/upload/v1741776641/footerbg_yiqslb.jpg"})`,
     backgroundPosition: "bottom",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -146,6 +146,13 @@ const Footer = ({ contactRef }) => {
             </div>
         </div>
     );
-}
+};
+
+Footer.propTypes = {
+    contactRef: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.any }),
+    ]),
+};  
  
 export default Footer;

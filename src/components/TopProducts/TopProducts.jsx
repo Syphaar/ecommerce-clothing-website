@@ -1,7 +1,5 @@
-// import Img1 from "../../assets/hero/casual.jpg";
-// import Img2 from "../../assets/hero/customized.jpg";
-// import Img3 from "../../assets/hero/dinner.jpg";
 import { FaStar } from "react-icons/fa";
+import PropTypes from "prop-types"; // Import PropTypes
 
 const ProductsData = [
     {
@@ -70,6 +68,11 @@ const TopProducts = ({ handleOrderPopup, bestproductsRef }) => {
             </div>
         </div>
     );
-}
- 
+};
+
+TopProducts.propTypes = {
+    handleOrderPopup: PropTypes.func.isRequired, // Function type
+    bestproductsRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }), // Ref object
+};
+
 export default TopProducts;

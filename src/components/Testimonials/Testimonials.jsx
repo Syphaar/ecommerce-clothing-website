@@ -1,8 +1,5 @@
 import Slider from "react-slick";
-// import pic1 from "../../assets/hero/review 2.jpg";
-// import pic2 from "../../assets/hero/review 3.jpg";
-// import pic3 from "../../assets/hero/review 4.jpg";
-// import pic4 from "../../assets/hero/review 1.jpg";
+import PropTypes from "prop-types"; // Import prop-types
 
 const testimonialData = [
     {
@@ -110,6 +107,13 @@ const Testimonials = ({ testimonialsRef }) => {
             </div>
         </div>
     );
-}
+};
+
+Testimonials.propTypes = {
+    testimonialsRef: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.any }),
+    ]),
+};  
  
 export default Testimonials;

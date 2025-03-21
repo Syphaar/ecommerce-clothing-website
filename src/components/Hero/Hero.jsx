@@ -1,9 +1,5 @@
-// import React from "react";
-// import Image1 from "../../assets/hero/women.jpg";
-// import Image1 from "https://res.cloudinary.com/dlcoacdkb/image/upload/v1735536596/men_s_xxpkqm.jpg";
-// import Image2 from "https://res.cloudinary.com/dlcoacdkb/image/upload/v1735536624/women_s_o19ydw.jpg";
-// import Image3 from "https://res.cloudinary.com/dlcoacdkb/image/upload/v1735536603/sale_pjxr18.jpg";
 import Slider from "react-slick";
+import PropTypes from "prop-types"; // Import PropTypes
 
 const ImageList = [
     {
@@ -77,6 +73,11 @@ const Hero = ({ handleOrderPopup, heroRef }) => {
             </div>
         </div>
     );
-}
+};
+
+Hero.propTypes = {
+    handleOrderPopup: PropTypes.func.isRequired, // Function type
+    heroRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }), // Ref object
+};
  
 export default Hero;

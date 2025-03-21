@@ -1,13 +1,9 @@
-// import Img1 from "../../res-ecommerce-website/src/assets/hero/logo.jpg";
 import { IoMdSearch } from "react-icons/io";
 import { FaCaretDown, FaShoppingCart } from "react-icons/fa";
-// import { MdOutlineClose } from "react-icons/md";
-// import { HiMiniBars3 } from "react-icons/hi2";
 import Darkmode from "./components/Darkmode";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-// import { data } from "autoprefixer";
-
+import PropTypes from "prop-types"; // Import PropTypes
 
 const Navbar = ({ handleOrderPopup, scrollToSection, activeSection}) => {
     
@@ -197,6 +193,13 @@ const Navbar = ({ handleOrderPopup, scrollToSection, activeSection}) => {
             </div>
         </div>
     );
-}
+};
+
+// Add PropTypes validation
+Navbar.propTypes = {
+    handleOrderPopup: PropTypes.func.isRequired, // Function type
+    scrollToSection: PropTypes.func.isRequired, // Function type
+    activeSection: PropTypes.string.isRequired, // String type
+};
  
 export default Navbar;

@@ -1,10 +1,5 @@
-// import React from "react";
-// import Img1 from "../../assets/hero/t-one.jpg";
-// import Img2 from "../../assets/hero/t-two.jpg";
-// import Img3 from "../../assets/hero/t-three.jpg";
-// import Img4 from "../../assets/hero/t-four.jpg";
-// import Img5 from "../../assets/hero/t-five.jpg";
 import { FaStar } from "react-icons/fa";
+import PropTypes from "prop-types"; // Import prop-types
 
 const ProductsData = [
     {
@@ -92,5 +87,12 @@ const ProductsTwo = ({ topproductsRef }) => {
         </div>
     );
 }
+
+ProductsTwo.propTypes = {
+    topproductsRef: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.any }),
+    ]),
+};  
  
 export default ProductsTwo;
